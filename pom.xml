@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.artfully.contrived.api</groupId>
+  <artifactId>bestone</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>bestOne Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+	
+	<properties>
+    <jersey.version>2.2</jersey.version>
+  
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>4.2.0.RELEASE</spring.version>
+    <jersey.version>2.21</jersey.version>
+</properties>
+  <dependencies>
+    <dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version>4.12</version>
+</dependency>
+
+	  
+	  <dependency>
+	<groupId>org.glassfish.jersey.core</groupId>
+	<artifactId>jersey-server</artifactId>
+	<version>2.21</version>
+</dependency>
+    
+    <dependency>
+	<groupId>org.glassfish.jersey.containers</groupId>
+	<artifactId>jersey-container-servlet</artifactId>
+	<version>2.21</version>
+</dependency>
+
+<dependency>
+	<groupId>io.dropwizard.metrics</groupId>
+	<artifactId>metrics-jersey2</artifactId>
+	<version>3.1.2</version>
+</dependency>
+    
+    <dependency>
+	<groupId>io.dropwizard.metrics</groupId>
+	<artifactId>metrics-servlets</artifactId>
+	<version>3.1.2</version>
+</dependency> 
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>servlet-api</artifactId>
+	<version>3.0-alpha-1</version>
+</dependency>
+
+
+  </dependencies>
+  <build>
+    <finalName>bestone</finalName>
+	   <plugins>
+       
+       
+          <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+               </configuration>
+          </plugin>	
+		   <plugin>
+  <groupId>org.eclipse.jetty</groupId>
+  <artifactId>jetty-maven-plugin</artifactId>
+  <version>9.3.3.v20150827</version>
+         <configuration>
+      <scanIntervalSeconds>2</scanIntervalSeconds>
+      <webAppConfig>
+        <contextPath>/bestone</contextPath>
+      </webAppConfig>
+    </configuration>
+</plugin>
+      </plugins>
+  </build>
+</project>
