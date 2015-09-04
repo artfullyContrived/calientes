@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class Greeting {
 
-  private String greeting = "Hallo";
+  private String greeting = "Hallo ";
   /**
    * @return the greeting
    */
